@@ -1,0 +1,78 @@
+{
+  "name": "beer-catalog-backend",
+  "version": "1.0.0",
+  "description": "Beer Catalog App (backend)",
+  "main": "src/start.ts",
+  "scripts": {
+    "seed": "ts-node ./src/_database/mongoDB/seed/seedBeersCollection.ts",
+    "dev": "ts-node-dev --respawn src/start.ts",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "tsc",
+    "start": "node ./dist/start.js",
+    "seedAndStart": "ts-node ./src/_database/mongoDB/seed/seedBeersCollection.ts && node ./dist/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioMartinezFernandez/beer-catalog-backend.git"
+  },
+  "keywords": [
+    "beer",
+    "catalog",
+    "backend"
+  ],
+  "author": "Antonio Martínez",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.11.0",
+    "ajv-formats": "^2.1.1",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.1",
+    "hpp": "^0.2.3",
+    "inversify": "^6.0.1",
+    "inversify-express-utils": "^6.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.5.1",
+    "morgan": "^1.10.0",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^4.7.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/bcrypt": "^5.0.0",
+    "@types/compression": "^1.7.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/hpp": "^0.2.2",
+    "@types/jest": "^28.1.6",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/module-alias": "^2.0.1",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^18.6.4",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "jest": "^28.1.3",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/AntonioMartinezFernandez/beer-catalog-backend/issues"
+  },
+  "homepage": "https://github.com/AntonioMartinezFernandez/beer-catalog-backend#readme"
+}
