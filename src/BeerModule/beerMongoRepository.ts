@@ -66,6 +66,10 @@ export class BeerMongoRepository implements IBeerRepository {
   }
 
   async searchByTerm(term: string) {
+    // Escape parenthesis characters
+    term = term.replace(/\(/g, '\\(');
+    term = term.replace(/\)/g, '\\)');
+
     // Regular Expression: Should contains term string and is case insensitive
     const regex = new RegExp('^.*' + term.toLowerCase() + '.*', 'i');
 
